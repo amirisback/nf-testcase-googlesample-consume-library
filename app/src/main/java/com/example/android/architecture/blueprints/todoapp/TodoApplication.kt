@@ -18,6 +18,12 @@ package com.example.android.architecture.blueprints.todoapp
 
 import android.app.Application
 import com.example.android.architecture.blueprints.todoapp.data.source.TasksRepository
+import com.example.android.architecture.blueprints.todoapp.di.repositoryModule
+import com.example.android.architecture.blueprints.todoapp.di.viewModelModule
+import org.koin.android.ext.koin.androidContext
+import org.koin.android.ext.koin.androidLogger
+import org.koin.core.context.startKoin
+import org.koin.core.logger.Level
 import timber.log.Timber
 import timber.log.Timber.DebugTree
 
@@ -35,6 +41,11 @@ class TodoApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
+        startKoin {
+            androidContext(this@TodoApplication)
+            androidLogger(Level.NONE)
+            modules(listOf(repositoryModule, viewModelModule))
+        }
         if (BuildConfig.DEBUG) Timber.plant(DebugTree())
     }
 }

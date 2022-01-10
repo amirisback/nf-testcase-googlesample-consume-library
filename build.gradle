@@ -26,6 +26,7 @@ allprojects {
         google()
         jcenter()
         mavenCentral()
+        maven { url 'https://jitpack.io' }
     }
     apply plugin: 'com.diffplug.spotless'
     spotless {
@@ -70,4 +71,5 @@ ext {
     rulesVersion = '1.0.1'
     timberVersion = '4.7.1'
     truthVersion = '1.1.2'
+    koinVersion = '3.1.1'
 }
