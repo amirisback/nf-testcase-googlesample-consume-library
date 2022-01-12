@@ -16,8 +16,10 @@ What's New??
 
 ## Test Implementation
 
-### Scenario Test
+### Scenario Test TC-1
 ![ScreenShoot Apps](docs/image/scenario-test-1.png?raw=true)
+
+### Scenario Test TC-2
 ![ScreenShoot Apps](docs/image/scenario-test-2.png?raw=true)
 
 - Kondisi Apps : Native Tanpa Framework
