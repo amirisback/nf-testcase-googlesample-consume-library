@@ -23,7 +23,7 @@ import org.koin.dsl.module
 val repositoryModule = module {
 
     single {
-        ConsumeNewsApi(NewsUrl.API_KEY)
+        ConsumeNewsApi("537d2afe5a594e28b967e1118c7c38d3")
     }
 
     single {

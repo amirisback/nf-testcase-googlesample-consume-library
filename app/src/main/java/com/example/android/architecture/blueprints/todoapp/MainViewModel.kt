@@ -31,12 +31,17 @@ class MainViewModel(
 
     val listData = NutriSingleLiveEvent<List<Article>>()
 
-    fun getData() {
-        newsApi.getTopHeadline(
+    fun getData(query: String) {
+        newsApi.getEverythings(
+            query,
+            null,
+            null,
+            null,
             null,
             null,
             null,
             NewsConstant.COUNTRY_ID,
+            null,
             null,
             null,
             object : NutriResponse.DataResponse<ArticleResponse> {

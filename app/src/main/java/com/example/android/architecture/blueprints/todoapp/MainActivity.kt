@@ -1,10 +1,11 @@
 package com.example.android.architecture.blueprints.todoapp
 
+import android.app.SearchManager
 import android.content.Context
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.util.Log
+import android.view.*
+import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.android.architecture.blueprints.todoapp.databinding.ActivityMainBinding
@@ -26,7 +27,7 @@ class MainActivity : NutriActivity<ActivityMainBinding>() {
 
     override fun setupViewModel() {
         mainViewModel.apply {
-            getData()
+            getData("susu")
 
             listData.observe(this@MainActivity, {
                 setupRv(it)
@@ -100,6 +101,32 @@ class MainActivity : NutriActivity<ActivityMainBinding>() {
 
         })
 
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.menu_search, menu)
+
+        val searchItem: MenuItem? = menu.findItem(R.id.action_search)
+        val searchManager = getSystemService(Context.SEARCH_SERVICE) as SearchManager
+        val searchView: SearchView = searchItem?.actionView as SearchView
+
+        searchView.setSearchableInfo(searchManager.getSearchableInfo(componentName))
+
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                query?.let { Log.d("Query Searched", it) }
+                query?.let { mainViewModel.getData(it) }
+                return true
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                newText?.let { Log.d("Query Searched", it) }
+                newText?.let { mainViewModel.getData(it) }
+                return true
+            }
+
+        })
+        return super.onCreateOptionsMenu(menu)
     }
 
 }
