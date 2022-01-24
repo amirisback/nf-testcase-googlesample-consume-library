@@ -111,8 +111,33 @@ Using 2 Android Phone (Redmi Note 10 5G - Xiaomi M2103K19G) and (Oppo CPH1729)
     - TC-2-A : Mencari daftar item dengan keyword "vitamin"
     - TC-2-B : Pilih item dari daftar yang di tampilkan
 
-### Result Test
-![ScreenShoot Apps](docs/image/profiler.png?raw=true)
+### Result
+
+- Profiler Test Case 1 (TC-1) [more details](https://github.com/amirisback/nf-testcase-googlesample-consume-library/tree/master/docs/image/result-profiler-test-case-1)
+
+<table>
+    <tr>
+        <th><a href="https://github.com/amirisback/nf-testcase-googlesample-consume-library/tree/master/docs/image/result-profiler-test-case-1/redmi-note-10-5G">Redmi Note 10 5G - Xiaomi M2103K19G</a></th>
+        <th><a href="https://github.com/amirisback/nf-testcase-googlesample-consume-library/tree/master/docs/image/result-profiler-test-case-1/oppo-CPH1729">Oppo CPH1729</a></th>
+    </tr>
+    <tr>
+        <td><img src="https://raw.githubusercontent.com/amirisback/nf-testcase-googlesample-consume-library/master/docs/image/result-profiler-test-case-1/redmi-note-10-5G/test-case-1-all-general.png"></td>
+        <td><img src="https://raw.githubusercontent.com/amirisback/nf-testcase-googlesample-consume-library/master/docs/image/result-profiler-test-case-1/oppo-CPH1729/test-case-1-all-general.png"></td>
+    </tr>
+</table>
+
+- Profiler Test Case 2 (TC-2) [more details](https://github.com/amirisback/nf-testcase-googlesample-consume-library/tree/master/docs/image/result-profiler-test-case-2)
+
+<table>
+    <tr>
+        <th><a href="https://github.com/amirisback/nf-testcase-googlesample-consume-library/tree/master/docs/image/result-profiler-test-case-2/redmi-note-10-5G">Redmi Note 10 5G - Xiaomi M2103K19G</a></th>
+        <th><a href="https://github.com/amirisback/nf-testcase-googlesample-consume-library/tree/master/docs/image/result-profiler-test-case-2/oppo-CPH1729">Oppo CPH1729</a></th>
+    </tr>
+    <tr>
+        <td><img src="https://raw.githubusercontent.com/amirisback/nf-testcase-googlesample-consume-library/master/docs/image/result-profiler-test-case-2/redmi-note-10-5G/test-case-2-all-general.png"></td>
+        <td><img src="https://raw.githubusercontent.com/amirisback/nf-testcase-googlesample-consume-library/master/docs/image/result-profiler-test-case-2/oppo-CPH1729/test-case-2-all-general.png"></td>
+    </tr>
+</table>
 
 ## Documentation
 ### Research Data
